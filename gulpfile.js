@@ -4,7 +4,7 @@ const {src, dest, parallel, watch} = require('gulp');
 const server = require('browser-sync').create();
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(requare('sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
 const htmlmin = require('gulp-htmlmin');
@@ -50,7 +50,7 @@ function styles() {
 	.pipe(plumber())
 	.pipe(eval('sass')())
 	.pipe(concat('style.min.css'))
-	.pipe(autoprefixer({ overrideBrowsersList: ['last 10 version'], grid: true}))
+	.pipe(autoprefixer())
 	.pipe(cleancss({level: { 1: { specialComments: 0 }}/*, format: 'beautify'*/}))
 	.pipe(dest('dist/css/'))
 }
