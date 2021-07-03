@@ -67,6 +67,7 @@ function startwatch() {
 	watch(['src/**/*.js', '!src/**/*.min.js'], scripts).on('change', server.reload);
 	watch('src/**/*.sass', styles).on('change', server.reload);
 	watch('src/**/*.html', html).on('change', server.reload);
+	watch('src/images/**/*', images);
 }
 
 exports.html = html;
